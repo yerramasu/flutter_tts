@@ -12,7 +12,7 @@ public class SwiftFlutterTtsPlugin: NSObject, FlutterPlugin, AVSpeechSynthesizer
   var voice: AVSpeechSynthesisVoice?
 
   var channel = FlutterMethodChannel()
-
+  @available(iOS 10.0, *)
   init(channel: FlutterMethodChannel) {
     super.init()
     self.channel = channel
@@ -23,7 +23,7 @@ public class SwiftFlutterTtsPlugin: NSObject, FlutterPlugin, AVSpeechSynthesizer
     do {
       //try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
       //try AVAudioSession.sharedInstance().setActive(true)
-      @available(iOS 10.0, *)
+      //@available(iOS 10.0, *)
       try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: [])
     } catch {
       print(error)
