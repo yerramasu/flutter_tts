@@ -23,6 +23,7 @@ public class SwiftFlutterTtsPlugin: NSObject, FlutterPlugin, AVSpeechSynthesizer
     do {
       //try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
       //try AVAudioSession.sharedInstance().setActive(true)
+      @available(iOS 10.0, *)
       try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: [])
     } catch {
       print(error)
