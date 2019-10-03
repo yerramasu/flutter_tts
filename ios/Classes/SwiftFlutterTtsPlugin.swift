@@ -2,6 +2,7 @@ import Flutter
 import UIKit
 import AVFoundation
 
+@available(iOS 10.0, *)
 public class SwiftFlutterTtsPlugin: NSObject, FlutterPlugin, AVSpeechSynthesizerDelegate {
   let synthesizer = AVSpeechSynthesizer()
   var language: String = AVSpeechSynthesisVoice.currentLanguageCode()
